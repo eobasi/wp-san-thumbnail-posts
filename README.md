@@ -1,12 +1,12 @@
 # Wordpress San-Thumbnail Posts Plugin
 
-Contributors: eobasi
-Tags: post, utility, image, thumbnail
-Requires at least: 5.5
-Tested up to: 5.8.1
-Stable tag: 5.8.1
-License: GPLv2 or later
-License URI: https://www.gnu.org/licenses/gpl-2.0.html
+ - Contributors: eobasi
+ - Tags: post, utility, image, thumbnail
+ - Requires at least: 5.5
+ - Tested up to: 5.8.1
+ - Stable tag: 5.8.1
+ - License: GPLv2 or later
+ - License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 A simple Wordpress plugin to list posts without a featured image in the admin posts page.
 
