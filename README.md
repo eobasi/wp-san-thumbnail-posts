@@ -8,13 +8,13 @@ The plugin works for the 'post' post type only with plans to extend it to other 
  - Edit a post to add a featured image.
 
 # License
-/**
+
  * This software is intended for use with Wordpress Software http://www.wordpress.org/ and is a proprietary licensed product.
 
  * ---
  * Copyright (c) 2020, Ebenezer Obasi
  * All rights reserved.
- * eobasilive@gmail.com.
+ * info@eobasi.com.
 
  * Redistribution and use in source and binary forms, with or without modification, are not permitted provided.
 
@@ -27,4 +27,3 @@ The plugin works for the 'post' post type only with plans to extend it to other 
  * PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED
  * AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- */
