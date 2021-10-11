@@ -4,6 +4,5 @@ Your time-saving tool for finding post with no featured image. This is perfect i
 The plugin works for the 'post' post type only with plans to extend it to other post types in future updates.
 
 ## ACCESS
- - You will find the plugin under the own menu item ‘Featured Images’
- - You can select an image in the media library with the action link ‘Bulk set as featured image’. Click on it and you can go on with the plugin.
- - You can set in ‘Settings’ which minimum user role is allowed to see the plugin in his/her administration area. You can switch between ‘Administrator’ and ‘Editor’. The default value is ‘Editor’.
+ - You will find the plugin in the WP Admin > Post sub-menus. Click on the 'No Thumbnail' link to list your posts with no featured image.
+ - Edit a post to add a featured image.
