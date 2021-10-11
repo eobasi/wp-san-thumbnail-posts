@@ -1,4 +1,5 @@
 # Wordpress San-Thumbnail Posts Plugin
+
 Contributors: eobasi
 Tags: post, utility, image, thumbnail
 Requires at least: 5.5
