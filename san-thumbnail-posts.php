@@ -1,12 +1,4 @@
 <?php
-/* 
-	Plugin Name: San-Thumbnail Posts
-	Plugin URI: http://eobasi.com/san-thumbnail-posts
-	Description: A simple Wordpress plugin to list posts without a featured image in the admin posts page.
-	Author: Ebenezer Obasi
-	Version: 1
-	Author URI: http://eobasi.com
-*/
 
 /**
  * This software is intended for use with Wordpress Software http://www.wordpress.org/ and is a proprietary licensed product.
@@ -28,12 +20,26 @@
  * PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED
  * AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ *
+ * @since             1.0.0
+ * @package           San_Thumbnail_Posts
+ *
+ * @wordpress-plugin
+ * Plugin Name:       San-Thumbnail Posts
+ * Plugin URI:        http://eobasi.com/san-thumbnail-posts
+ * Description:       A simple Wordpress plugin to list posts without a featured image in the admin posts page.
+ * Version:           1.0.0
+ * Author:            ThematoSoup
+ * Author URI:        http://eobasi.com
+ * License:           GPL-2.0+
+ * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
+ * Text Domain:       san-thumbnail-posts
  */
 
 /**
  * Initialize San-Thumbnail Posts item
  */
-add_action( 'current_screen', function() {
+add_action( 'current_screen', function( ) {
 	if ( !is_admin() ) {
 		return;
 	}

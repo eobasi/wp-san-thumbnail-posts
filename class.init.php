@@ -39,7 +39,7 @@ CLASS SAN_THUMBNAIL_POSTS
     public function init()
     {
         $post_types = ['post'];
-        $post_type = (isset($_GET['post_type'])) ? $_GET['post_type'] : 'post';
+        $post_type = (isset($_GET['post_type'])) ? sanitize_text_field($_GET['post_type']) : 'post';
 
         if( $this->screen && in_array($post_type, $post_types) )
         {
@@ -50,19 +50,22 @@ CLASS SAN_THUMBNAIL_POSTS
 
     public function addViewItem( $views )
     {
-        $url = admin_url('edit.php') . '?' . build_query([
-            'san_thumbnail_posts' => true,
+        $url = esc_url( admin_url('edit.php') . '?' . build_query([
+            self::VAR_NAME => true,
             'post_type' => 'post',
-        ]);
-    
-        $views['nothumbnail'] = "<a href='{$url}'>No Thumbnail <span class='count'>({$this->countPosts()})</span></a>";
+        ]));
+        
+        $label = __('No Thumbnail', 'san-thumbnail-posts');
+        $class = $this->isActive() ? 'current' : '';
+
+        $views['nothumbnail'] = "<a href='{$url}' class='{$class}'>{$label} <span class='count'>({$this->countPosts()})</span></a>";
     
         return $views;
     }
 
     public function parseQuery( $query )
     {
-        if (isset($_GET['san_thumbnail_posts'])) {
+        if( $this->isActive( ) ) {
             $query->query_vars['meta_query'][] = array(
                 'key' => '_thumbnail_id',
                 'compare' => 'NOT EXISTS'
@@ -86,5 +89,15 @@ CLASS SAN_THUMBNAIL_POSTS
         );
     
         return (int) $query->found_posts;
+    }
+
+    public function isActive()
+    {
+        if (isset($_GET[self::VAR_NAME]) && ((bool) sanitize_text_field($_GET[self::VAR_NAME])) )
+        {
+            return true;
+        }
+
+        return false;
     }
 }
